@@ -44,8 +44,8 @@
 	
 	$to = $nome;
 	$email = $email;
-	$fromaddress = 'cesarmascarenhas@gmail.com';
-	$fromname = 'Cesar Mascarenhas';
+	$fromaddress = 'contato@qfixr.com.br';
+	$fromname = 'Qfixr Brasil';
 	
 	$mail = new PHPMailer();
 	
@@ -64,7 +64,7 @@
 		$recipient = E_EMAIL;
 		$subject = 'Envio Falhou';
 		$content = $body;	
-		mail($recipient, $subject, $content, "From: mail@yourdomain.com\r\nReply-To: $email\r\nX-Mailer: DT_formmail");
+		mail($recipient, $subject, $content, "From: contato@qfixr.com.br\r\nReply-To: $email\r\nX-Mailer: DT_formmail");
 		exit;
 	}
 
