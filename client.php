@@ -2,13 +2,15 @@
 	
 	require("phpmailer.php");
 	
-	$nome 		= $_POST['name'];
-	$tel 		= $_POST['tel'];
-	$email 		= $_POST['email'];
-	$mensagem 	= $_POST['message'];
+  $date = date('r');
+  $remote_addr = $_SERVER['REMOTE_ADDR'];
+	$nome = $_POST['name'];
+	$tel = $_POST['tel'];
+	$email = $_POST['email'];
+	$mensagem = $_POST['message'];
 	
 	
-	$data = "nome:$nome|; tel:$tel|; email:$email|; mensagem:$mensagem|;".PHP_EOL;
+	$data = "$date;$remote_addr;$nome;$tel;$email;$mensagem;".PHP_EOL;
 	
 	$fh = fopen("clientes.txt", "a");
 	fwrite($fh, $data);
@@ -61,7 +63,7 @@
 	$mail->AltBody  =  $corpo_email;//E_MENSAGEM." <bold>$idvela</bold> e do email $email.";
 	
 	if(!$mail->Send()) {
-		$recipient = E_EMAIL;
+		$recipient = "contato@qfixr.com.br";
 		$subject = 'Envio Falhou';
 		$content = $body;	
 		mail($recipient, $subject, $content, "From: contato@qfixr.com.br\r\nReply-To: $email\r\nX-Mailer: DT_formmail");
