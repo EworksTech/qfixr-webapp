@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>QFIXR - BEM VINDO</title>
+    <title>Qfixr | Suporte Domiciliar</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="suporte domiciliar, computador, conserto, pc">
+    <meta name="keywords" content="suporte, domiciliar, computador, conserto, pc">
     <meta name="description" content="Encontre um técnico de informática qualificado perto da sua casa de forma rápida, segura e eficiente.">
     <link href="css/bootstrap.css" rel="stylesheet" media="screen">
     <link href="css/bootstrap-responsive.css" rel="stylesheet" media="screen">
@@ -117,17 +117,15 @@
             </div>
             <div class="span4">
                 <h3 class="titlecolor">Problemas com seu PC?</h3>
-                <p class="descriptioncolor"><span class="highlightcolor">Confira o video</span> logo abaixo e veja como funciona.
-                    Se preferir clique no botão para entrar em 
-                    contato conosco.</p>
-                <button id="go_client"  class="btn btn-large btn-defaultorange ">ENTRE EM CONTATO</i></button>
+                <p class="descriptioncolor">Confira o video abaixo e veja como funciona.
+                    Se já é nosso cliente, clique no botão abaixo para solicitar atendimento.</p>
+                <button id="go_client"  class="btn btn-large btn-defaultorange ">PRECISO DE UM TÉCNICO</i></button>
             </div> 
             <div class="span4">
-                <h3 class="titlecolor">Sabe consertar PC?</h3>
-                <p class="descriptioncolor">Descubra como ser um técnico Qfixr e 
-                    aumente a sua renda trabalhando 
-                    perto da sua casa.</p>
-                <button id="go_technician" class="btn btn-large btn-lightgray ">PARTICIPAR</i></button>
+                <h3 class="titlecolor">Sabe consertar um PC?</h3>
+                <p class="descriptioncolor">Descubra como ser um técnico qualificado Qfixr e 
+                    aumente sua renda trabalhando perto da sua casa.</p>
+                <button id="go_technician" class="btn btn-large btn-lightgray">SOU UM TÉCNICO</i></button>
             </div>          
         </div>
     </div>
@@ -135,20 +133,19 @@
     <!-- /header -->
     <!-- video -->
     <div id="video" class="container text-center">
-      <iframe width="853" height="480" src="//www.youtube.com/embed/TsE2zxrIpB4" frameborder="0" allowfullscreen></iframe>
-    	<!--iframe src="http://player.vimeo.com/video/14803194?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe-->
+      <!--iframe width="853" height="480" src="//www.youtube.com/embed/TsE2zxrIpB4" frameborder="0" allowfullscreen></iframe-->
+      <iframe width="853" height="480" src="//www.youtube.com/embed/2HiSFJlu6AQ" frameborder="0" allowfullscreen></iframe>
     </div>
     <!-- /video -->
     
     <!-- client form -->
     <div id="client" class="container">
-    	<div id="client-title" class="text-center"><h1 class="titlecolor">Precisa Consertar o seu Computador?</h1></div>
+    	<div id="client-title" class="text-center"><h1 class="titlecolor">Precisa consertar seu computador?</h1></div>
         <div class="row">
         	<div class="span5"><img  src="imgs/client_list.png" height="488" width="379"/></div>
             <div class="span4">
             	<p class="descriptioncolor">Preencha os campos abaixo e logo entraremos 
-em contato com você. Caso preferir, ligue para 
-nós no número</p>
+em contato. Se preferir, ligue diretamente para nós!</p>
             	<div id="client-phone" class="row">
                 	<div class="span1"><img  src="imgs/client_phone_icon.png" height="61" width="57"/></div>
                     <div><h2 class="orangecolor">4063-8100</h2></div>
@@ -159,7 +156,7 @@ nós no número</p>
                         <input class="input-block-level" type="text" id="client-tel"  placeholder="Telefone">
                     	<input class="input-block-level" type="text" id="client-email"  placeholder="Email">
                         <textarea class="input-block-level" rows="3" id="client-message" name="message" placeholder="Mensagem"></textarea>
-                        <button id="send_client" type="submit" class="btn btn-large btn-defaultorange">CONSERTAR MEU PC</button>
+                        <button id="send_client" type="submit" class="btn btn-large btn-defaultorange">SOLICITAR ATENDIMENTO</button>
                     
                 </div>
             </div>
@@ -170,12 +167,11 @@ nós no número</p>
      <!-- technician form -->
      <div id="technician">
         <div class="container">
-            <div id="technicia-title"><h1 class="titlecolor">Quer ser um técnico?&nbsp;<img src="imgs/technician_arrow.png" width="80" height="45" /></h1></div>        
+            <div id="technicia-title"><h1 class="titlecolor">Quer ser um técnico qualificado?&nbsp;<img src="imgs/technician_arrow.png" width="80" height="45" /></h1></div>        
         	<div class="row">
         	<div class="span5">
-            	<p class="descriptioncolor">Preencha os campos  e logo entraremos 
-                    em contato com você. Caso preferir, ligue para 
-                    nós no número</p>
+            	<p class="descriptioncolor">Preencha os campos abaixo e logo entraremos 
+                    em contato. Se preferir, ligue diretamente para nós!</p>
                 <div id="client-phone" class="row">
                 	<div class="span1"><img  src="imgs/technician_phone_icon.png" height="61" width="57"/></div>
                     <div><h2 class="rustcolor">4063-8100</h2></div>
@@ -185,7 +181,7 @@ nós no número</p>
                     	<input class="input-block-level" type="text" id="technician-name" placeholder="Nome">
                     	<input class="input-block-level" type="text" id="technician-email" placeholder="Email">
                         <input class="input-block-level" type="text" id="technician-tel" placeholder="Telefone">
-                        <button id="send_technician" type="submit" class="btn btn-large btn-rust">CANDIDATAR-ME</button>
+                        <button id="send_technician" type="submit" class="btn btn-large btn-rust">QUERO SER QUALIFICADO</button>
             </div>
         </div>
         </div>
@@ -255,7 +251,7 @@ nós no número</p>
 						
 					var nome = $("#client-name").val();
 					if (nome == "") {
-						bootbox.alert("Por favor, preencher todos os campos corretamente.", function() {
+						bootbox.alert("Por favor, preencha todos os campos corretamente.", function() {
 						  //
 						});	
 						return false;
@@ -263,7 +259,7 @@ nós no número</p>
 					
 					var tel = $("#client-tel").val();
 					if (tel == "") {
-						bootbox.alert("Por favor, preencher todos os campos corretamente.", function() {
+						bootbox.alert("Por favor, preencha todos os campos corretamente.", function() {
 						  //
 						});	
 						return false;
@@ -271,7 +267,7 @@ nós no número</p>
 					
 					var mensagem = $("#client-message").val();
 					if (mensagem == "") {
-						bootbox.alert("Por favor, preencher todos os campos corretamente.", function() {
+						bootbox.alert("Por favor, preencha todos os campos corretamente.", function() {
 						  //
 						});	
 						return false;
@@ -279,13 +275,13 @@ nós no número</p>
 					
 					var email = $("#client-email ").val();     
 					if (email == "") {
-						bootbox.alert("Por favor, preencher todos os campos corretamente.", function() {
+						bootbox.alert("Por favor, preencha todos os campos corretamente.", function() {
 							 //
 						});
 						return false;
 					} else {
 						if(!emailReg.test(email)){
-							bootbox.alert("Por favor, preencher todos os campos corretamente.", function() {
+							bootbox.alert("Por favor, preencha todos os campos corretamente.", function() {
 						  		//
 							});
 							return false;
@@ -304,14 +300,14 @@ nós no número</p>
 					  		url: "client.php", 
 					  		data: dataString
 						}).done(function( msg ) {
-						  		bootbox.alert("Parabéns! Agora você é um cliente Qfixr.<br>Estaremos entrando em contato com você o mais breve possível. ", function() {
+						  		bootbox.alert("Parabéns! Agora você é um cliente Qfixr!<br>Entraremos em contato o mais breve possível. ", function() {
 						  			  $("#client-name").val('');
 									  $("#client-tel").val('');
 									  $("#client-email").val('');
 									  $("#client-message").val('');
 								});
 						}).fail(function(jqXHR, textStatus) {
-						  		bootbox.alert("Um erro ocorreu, por favor tente mais tarde.", function() {
+						  		bootbox.alert("Não foi possível enviar sua solicitação. Por favor, tente mais tarde.", function() {
 						  			//
 								});
 						});
@@ -329,7 +325,7 @@ nós no número</p>
 						
 					var nome = $("#technician-name").val();
 					if (nome == "") {
-						bootbox.alert("Por favor, preencher todos os campos corretamente.", function() {
+						bootbox.alert("Por favor, preencha todos os campos corretamente.", function() {
 						  //
 						});	
 						return false;
@@ -337,7 +333,7 @@ nós no número</p>
 					
 					var tel = $("#technician-tel").val();
 					if (tel == "") {
-						bootbox.alert("Por favor, preencher todos os campos corretamente.", function() {
+						bootbox.alert("Por favor, preencha todos os campos corretamente.", function() {
 						  //
 						});	
 						return false;
@@ -345,13 +341,13 @@ nós no número</p>
 										
 					var email = $("#technician-email ").val();     
 					if (email == "") {
-						bootbox.alert("Por favor, preencher todos os campos corretamente.", function() {
+						bootbox.alert("Por favor, preencha todos os campos corretamente.", function() {
 							 //
 						});
 						return false;
 					} else {
 						if(!emailReg.test(email)){
-							bootbox.alert("Por favor, preencher todos os campos corretamente.", function() {
+							bootbox.alert("Por favor, preencha todos os campos corretamente.", function() {
 						  		//
 							});
 							return false;
@@ -376,7 +372,7 @@ nós no número</p>
 									  $("#technician-email").val('');
 								});
 						}).fail(function(jqXHR, textStatus) {
-						  		bootbox.alert("Um erro ocorreu, por favor tente mais tarde.", function() {
+						  		bootbox.alert("Não foi possivel enviar sua solicitação. Por favor, tente mais tarde.", function() {
 						  			//
 								});
 						});
