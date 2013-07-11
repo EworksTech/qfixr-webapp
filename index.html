@@ -13,88 +13,84 @@
     <link href="favicon.ico" rel="icon" />
   </head>
   <style>
-  body{
-   background: url(imgs/header_bg.png) repeat-x;
-  }
-  
-  .titlecolor{
-	color:#6b6b6b;  
-  }
-  .descriptioncolor{
-	color:#989898;
-	/*font-weight:bold;*/
-  }
-  .highlightcolor{
-	 color:#005699;
-  }
-  
-  .qfixr_header{
-  	margin-top:30px;
-  }
-  
-  .qfixr_header img{
-	 margin-top:10px; 
-  }
-  .container{
-   max-width:980px;
-  }
-  
-  #video{
-	 margin-top:50px;
-	 margin-bottom:40px; 
-  }
-  #client-title{
-	  margin-bottom:60px;
-  }
-  
-  .orangecolor{
-		color:#f9a11b;
-	}
-.rustcolor{
-	color:#ff4800;
-}
- #client-phone{
-	 margin-top:60px;
-	 margin-bottom:60px;
-}
-#technician{
-	background: url(imgs/technician_bg.png) repeat;
-	margin-top:60px;
-	padding-bottom:60px;
-}
-#technicia-title{
-	margin-top:80px;
-	margin-bottom:40px;
-}
-#footer{
-	background-color:#2f5b7f;
-	padding-top:40px;
-	padding-bottom:40px;
-	color:#FFF;
-}
-#footer address{
-	margin-top:45px;
-	font-weight:bold;
-	width: 300px;
-}
-#social{
-	margin-top:35px;
-}
-#copy {
-  text-align: center;
-  font-size: 12px;
-}
-#copy a {
-  color: #fff;
-}
-@media (max-width: 767px) {
-	#footer,#technician{
-		margin-left: -20px;
-		margin-right: -20px;
-		padding-left: 20px;
-		padding-right:20px;
-	}
-}
+		body{
+		 background: url(imgs/header_bg.png) repeat-x;
+		}
+		.titlecolor{
+			color: #6b6b6b;	
+		}
+		.descriptioncolor{
+			color: #989898;
+		/*font-weight:bold;*/
+		}
+		.highlightcolor{
+		 color: #005699;
+		}
+		.qfixr_header{
+			margin-top: 30px;
+		}
+		.qfixr_header img{
+		 margin-top: 10px; 
+		}
+		.container{
+		 max-width: 980px;
+		}
+		.orangecolor{
+			color: #f9a11b;
+		}
+		.rustcolor{
+			color: #ff4800;
+		}
+
+		#video{
+		 margin-top: 50px;
+		 margin-bottom: 40px; 
+		}
+		#client-title{
+			margin-bottom: 60px;
+		}
+		#client-phone{
+			 margin-top: 60px;
+			 margin-bottom: 60px;
+		}
+		#technician{
+			background: url(imgs/technician_bg.png) repeat;
+			margin-top: 60px;
+			padding-bottom: 60px;
+		}
+		#technicia-title{
+			margin-top: 80px;
+			margin-bottom: 40px;
+		}
+		#footer{
+			background-color: #2f5b7f;
+			padding-top: 40px;
+			padding-bottom: 40px;
+			color: #FFF;
+		}
+		#footer address{
+			margin-top: 45px;
+			font-weight: bold;
+			width: 300px;
+		}
+		#social{
+			margin-top: 15px;
+		}
+		#copy {
+			text-align: center;
+			font-size: 12px;
+		}
+		#copy a {
+			color: #fff;
+		}
+		@media (max-width: 767px) {
+			#footer,#technician{
+				margin-left: -20px;
+				margin-right: -20px;
+				padding-left: 20px;
+				padding-right: 20px;
+			}
+		}
 
   </style>
   <body>
@@ -135,9 +131,7 @@
     <!-- /header -->
     <!-- video -->
     <div id="video" class="container text-center">
-      <!--iframe width="853" height="480" src="//www.youtube.com/embed/TsE2zxrIpB4" frameborder="0" allowfullscreen></iframe-->
-      <!--iframe width="853" height="480" src="//www.youtube.com/embed/2HiSFJlu6AQ" frameborder="0" allowfullscreen></iframe-->
-      <iframe width="560" height="315" src="//www.youtube.com/embed/l8wCCCySXHo" frameborder="0" allowfullscreen></iframe>
+			<iframe width="853" height="480" src="//www.youtube.com/embed/u4SZUDnuw10?rel=0" frameborder="0" allowfullscreen></iframe>
     </div>
     <!-- /video -->
     
@@ -214,7 +208,9 @@
                 	<h5>Siga-nos</h5>
                     
                     	<a href="https://www.facebook.com/QfixrBrasil" target="_blank"><img  src="imgs/facebook_icon.png" height="35" width="37"/></a>
+                    	<a href="https://plus.google.com/107613946137651983431" rel="publisher"><img  src="imgs/gplus_icon.png"/></a>
                     	<a href="http://twitter.com/QfixrBrasil" target="_blank"><img  src="imgs/twitter_icon.png" height="34" width="52"/></a>
+                    	<a href="http://www.youtube.com/user/QfixrBrasil" target="_blank"><img  src="imgs/youtube_icon.png"/></a>
                 	
                 </div>
             </div>
@@ -228,167 +224,7 @@
     <script src="js/jquery.fitvids.js"></script>
     <script src='js/jquery.scrollto.js'></script>
     <script src='js/bootbox.min.js'></script>
-    <script>
-  		$(document).ready(function(){    
-    		
-			$(".container").fitVids();
-			
-			$('#go_client').on('click', function(){
-				$('html,body').scrollTo('#client', '#client');
-                e.preventDefault();
-			});
-			
-			$('#go_technician').on('click', function(){
-				$('html,body').scrollTo('#technician', '#technician');
-                e.preventDefault();
-			});
-			
-			// envio de formularios
-			
-			//formulario cliente			
-			$("#send_client").on('click',function(){
-					
-					
-					
-					//valida os campos do cliente
-					var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
-			
-						
-					var nome = $("#client-name").val();
-					if (nome == "") {
-						bootbox.alert("Por favor, preencha todos os campos corretamente.", function() {
-						  //
-						});	
-						return false;
-					}
-					
-					var tel = $("#client-tel").val();
-					if (tel == "") {
-						bootbox.alert("Por favor, preencha todos os campos corretamente.", function() {
-						  //
-						});	
-						return false;
-					}
-					
-					var mensagem = $("#client-message").val();
-					if (mensagem == "") {
-						bootbox.alert("Por favor, preencha todos os campos corretamente.", function() {
-						  //
-						});	
-						return false;
-					}
-					
-					var email = $("#client-email ").val();     
-					if (email == "") {
-						bootbox.alert("Por favor, preencha todos os campos corretamente.", function() {
-							 //
-						});
-						return false;
-					} else {
-						if(!emailReg.test(email)){
-							bootbox.alert("Por favor, preencha todos os campos corretamente.", function() {
-						  		//
-							});
-							return false;
-						}	
-					}
-					
-					
-					///valida os campos do cliente
-					
-					//envia os dados para o servidor
-					
-					var dataString = "name="+nome+"&tel="+tel+"&email="+email+"&message="+mensagem;
-					
-					  	$.ajax({
-						  	type: "POST",
-					  		url: "client.php", 
-					  		data: dataString
-						}).done(function( msg ) {
-						  		bootbox.alert("Parabéns! Agora você é um cliente Qfixr!<br>Entraremos em contato o mais breve possível. ", function() {
-						  			  $("#client-name").val('');
-									  $("#client-tel").val('');
-									  $("#client-email").val('');
-									  $("#client-message").val('');
-								});
-						}).fail(function(jqXHR, textStatus) {
-						  		bootbox.alert("Não foi possível enviar sua solicitação. Por favor, tente mais tarde.", function() {
-						  			//
-								});
-						});
-					  return false;
-			});// /cliente
-			
-			//formulario tecnico
-			$("#send_technician").on('click',function(){
-					
-					
-					
-					//valida os campos do cliente
-					var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
-			
-						
-					var nome = $("#technician-name").val();
-					if (nome == "") {
-						bootbox.alert("Por favor, preencha todos os campos corretamente.", function() {
-						  //
-						});	
-						return false;
-					}
-					
-					var tel = $("#technician-tel").val();
-					if (tel == "") {
-						bootbox.alert("Por favor, preencha todos os campos corretamente.", function() {
-						  //
-						});	
-						return false;
-					}
-										
-					var email = $("#technician-email ").val();     
-					if (email == "") {
-						bootbox.alert("Por favor, preencha todos os campos corretamente.", function() {
-							 //
-						});
-						return false;
-					} else {
-						if(!emailReg.test(email)){
-							bootbox.alert("Por favor, preencha todos os campos corretamente.", function() {
-						  		//
-							});
-							return false;
-						}	
-					}
-					
-					
-					///valida os campos do cliente
-					
-					//envia os dados para o servidor
-					
-					var dataString = "name="+nome+"&tel="+tel+"&email="+email;
-					
-					  	$.ajax({
-						  	type: "POST",
-					  		url: "technician.php", 
-					  		data: dataString
-						}).done(function( msg ) {
-						  		bootbox.alert("Cadastro realizado com sucesso!<br>Agora você está mais perto de ser um técnico Qfixr. Aguarde, pois logo entraremos em contato. ", function() {
-						  			  $("#technician-name").val('');
-									  $("#technician-tel").val('');
-									  $("#technician-email").val('');
-								});
-						}).fail(function(jqXHR, textStatus) {
-						  		bootbox.alert("Não foi possivel enviar sua solicitação. Por favor, tente mais tarde.", function() {
-						  			//
-								});
-						});
-					  return false;
-			});// /cliente
-
-			
-  		});// /ready
-		
-		
-	</script>
+    <script src='js/landing.js'></script>
     
   </body>
 </html>
