@@ -72,7 +72,7 @@ $(document).ready(function(){
 	  		url: "client.php", 
 	  		data: dataString
 		}).done(function( msg ) {
-		  		bootbox.alert("Parabéns! Agora você é um cliente Qfixr!<br>Entraremos em contato o mais breve possível. ", function() {
+		  		bootbox.alert("Parabéns! Agora você é um cliente Qfixr!<br><br>Entraremos em contato o mais breve possível. ", function() {
 		  			  $("#client-name").val('');
 					  $("#client-tel").val('');
 					  $("#client-email").val('');
@@ -136,7 +136,7 @@ $(document).ready(function(){
 	  		url: "technician.php", 
 	  		data: dataString
 		}).done(function( msg ) {
-		  		bootbox.alert("Cadastro realizado com sucesso!<br>Agora você está mais perto de ser um técnico Qfixr. Aguarde, pois logo entraremos em contato. ", function() {
+		  		bootbox.alert("Cadastro realizado com sucesso!<br><br>Agora você está mais perto de ser um técnico Qfixr. Aguarde, pois logo entraremos em contato. ", function() {
 		  			  $("#technician-name").val('');
 					  $("#technician-tel").val('');
 					  $("#technician-email").val('');

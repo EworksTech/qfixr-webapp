@@ -25,15 +25,16 @@
 		<tbody>
 		<tr>
 			<td style="padding-right:15px;">
-				<img width="128" height="142" src="imgs/header_logo.png">
+				<img width="128" height="142" src="http://qfixr.com.br/imgs/header_logo.png">
 			</td>
 			<td colspan="2" style="color:#686868;font:20px Arial">
-				Parabéns! 
+				Parab&eacute;ns! 
 				<div style="color:#333;font:16px Arial;vertical-align:top;padding-top:10px">
-					Agora você é um cliente Qfixr. Estaremos entrando em contato com você o mais breve possível.
+					Agora voc&ecirc; &eacute; um cliente Qfixr.<br>
+					Entraremos em contato o mais breve poss&iacute;vel.
 				</div>
 				<div style="color:#333;font:24px Arial;vertical-align:top;padding-top:24px" align="left">
-					<img  src="imgs/client_phone_icon.png" height="30"/>&nbsp;4063-8100
+					<img  src="http://qfixr.com.br/imgs/client_phone_icon.png" height="30"/>&nbsp;4063-8100
 				</div>
 			</td>
 		</tr>
@@ -46,8 +47,8 @@
 	
 	$to = $nome;
 	$email = $email;
-	$fromaddress = 'contato@qfixr.com.br';
-	$fromname = 'Qfixr Brasil';
+	$fromaddress = 'eworks@tehran.dreamhost.com';
+	$fromname = 'Qfixr';
 	
 	$mail = new PHPMailer();
 	
@@ -72,7 +73,7 @@
 
 	$to = 'Qfixr';
 	$email = 'atendimento@qfixr.com.br';
-	$fromaddress = $email;
+	$fromaddress = 'eworks@tehran.dreamhost.com';
 	$fromname = $nome;
 	$corpo_email = str_replace(';', '<br>', $data);
 	

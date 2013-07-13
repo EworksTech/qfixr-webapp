@@ -29,7 +29,8 @@
 			<td colspan="2" style="color:#686868;font:20px Arial">
 				Cadastro realizado com sucesso! 
 				<div style="color:#333;font:16px Arial;vertical-align:top;padding-top:10px">
-					Agora voc&ecirc; est&aacute; mais perto de ser um t&eacute;cnico Qfixr. Aguarde, pois logo entraremos em contato. 
+					Agora voc&ecirc; est&aacute; mais perto de ser um t&eacute;cnico Qfixr.<br>
+					Aguarde, pois logo entraremos em contato. 
 				</div>
 				<div style="color:#333;font:24px Arial;vertical-align:top;padding-top:24px" align="left">
 					<img  src="http://qfixr.com.br/imgs/client_phone_icon.png" height="30"/>&nbsp;4063-8100
@@ -45,7 +46,7 @@
 	
 	$to = $nome;
 	$email = $email;
-	$fromaddress = 'atendimento@qfixr.com.br';
+	$fromaddress = 'eworks@tehran.dreamhost.com';
 	$fromname = 'Qfixr';
 	
 	$mail = new PHPMailer();
@@ -71,7 +72,7 @@
 
 	$to = 'Qfixr';
 	$email = 'atendimento@qfixr.com.br';
-	$fromaddress = $email;
+	$fromaddress = 'eworks@tehran.dreamhost.com';
 	$fromname = $nome;
 	$corpo_email = str_replace(';', '<br>', $data);
 	
