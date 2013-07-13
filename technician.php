@@ -8,11 +8,13 @@
 	$tel = $_POST['tel'];
 	$email = $_POST['email'];
 	
+	
 	$data = "$date;$remote_addr;$nome;$tel;$email;".PHP_EOL;
 	
 	$fh = fopen("tecnicos.txt", "a");
 	fwrite($fh, $data);
 	fclose($fh);
+	
 	
 	//email-------------------------------------------------------------------------
 	$corpo_email = '<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -41,11 +43,58 @@
 	
 	//===========================================================================
 	
-	$headers = "Content-Type: text/html; charset=utf-8\r\n";
-	$headers = "MIME-Version: 1.0\r\n";
+	$to = $nome;
+	$email = $email;
+	$fromaddress = 'atendimento@qfixr.com.br';
+	$fromname = 'Qfixr';
 	
-	mail('contato@qfixr.com.br', 'Qualificação de técnicos', str_replace(';', "<br>", $body), $headers);
-	mail($_POST['email'], 'Qfixr | Confirmação de cadastro', $corpo_email, $headers);
+	$mail = new PHPMailer();
+	
+	$mail->From     = $fromaddress;
+	$mail->FromName = $fromname;
+	$mail->AddAddress($email,$nome);
+	
+	$mail->WordWrap = 50;
+	$mail->IsHTML(true);
+	
+	$mail->Subject  =  "Bem-vindo ao QFIXR!";
+	$mail->Body     =  $corpo_email;//E_MENSAGEM." <bold>$idvela</bold> e do email $email.";
+	$mail->AltBody  =  $corpo_email;//E_MENSAGEM." <bold>$idvela</bold> e do email $email.";
+	
+	if(!$mail->Send()) {
+		$recipient = "contato@qfixr.com.br";
+		$subject = 'Envio Falhou';
+		$content = $body;	
+		mail($recipient, $subject, $content, "From: contato@qfixr.com.br\r\nReply-To: $email\r\nX-Mailer: DT_formmail");
+		exit;
+	}
+
+	$to = 'Qfixr';
+	$email = 'atendimento@qfixr.com.br';
+	$fromaddress = $email;
+	$fromname = $nome;
+	$corpo_email = str_replace(';', '<br>', $data);
+	
+	$mail = new PHPMailer();
+	
+	$mail->From     = $fromaddress;
+	$mail->FromName = $fromname;
+	$mail->AddAddress($email,$nome);
+	
+	$mail->WordWrap = 50;
+	$mail->IsHTML(true);
+	
+	$mail->Subject  =  "Candidato à qualificação";
+	$mail->Body     =  $corpo_email;//E_MENSAGEM." <bold>$idvela</bold> e do email $email.";
+	$mail->AltBody  =  $corpo_email;//E_MENSAGEM." <bold>$idvela</bold> e do email $email.";
+	
+	if(!$mail->Send()) {
+		$recipient = "contato@qfixr.com.br";
+		$subject = 'Envio Falhou';
+		$content = $body;	
+		mail($recipient, $subject, $content, "From: contato@qfixr.com.br\r\nReply-To: $email\r\nX-Mailer: DT_formmail");
+		exit;
+	}
 	
 	echo "Gravado";
 	
