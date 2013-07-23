@@ -85,7 +85,7 @@
 	$mail->WordWrap = 50;
 	$mail->IsHTML(true);
 	
-	$mail->Subject  =  "Candidato à qualificação";
+	$mail->Subject  =  "Candidato a tecnico";
 	$mail->Body     =  $corpo_email;//E_MENSAGEM." <bold>$idvela</bold> e do email $email.";
 	$mail->AltBody  =  $corpo_email;//E_MENSAGEM." <bold>$idvela</bold> e do email $email.";
 	

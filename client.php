@@ -86,7 +86,7 @@
 	$mail->WordWrap = 50;
 	$mail->IsHTML(true);
 	
-	$mail->Subject  =  "Solicitação de atendimento";
+	$mail->Subject  =  "Atendimento solicitado";
 	$mail->Body     =  $corpo_email;//E_MENSAGEM." <bold>$idvela</bold> e do email $email.";
 	$mail->AltBody  =  $corpo_email;//E_MENSAGEM." <bold>$idvela</bold> e do email $email.";
 	
