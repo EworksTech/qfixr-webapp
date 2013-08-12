@@ -120,5 +120,69 @@ class chamados_model extends CI_Model{
 		return $this->db->update('chamados', $data);
 		
 	}
+	//meus chamados
+	public function get_all_mycalls($id){
+		
+		$query = $this->db->query("SELECT * FROM chamados WHERE id_tecnico =".$id." AND finalizado_em IS NULL");
+		return $query->result_array();
+		
+	}
+	public function get_all_myclosedcalls($id){
+		
+		$query = $this->db->query("SELECT * FROM chamados WHERE id_tecnico =".$id." AND finalizado_em IS NOT NULL");
+		return $query->result_array();
+		
+	}
+	
+	public function set_checkin($id){
+		
+		$now = date("Y-m-d H:i:s");		
+		$data = array(
+			
+			'checkin_em' => $now 
+		
+		);		
+		$this->db->where('id', $id);
+		return $this->db->update('chamados', $data);
+	}
+	
+	public function set_checkout($id){
+		
+		$now = date("Y-m-d H:i:s");		
+		$data = array(
+			
+			'finalizado_em' => $now 
+		
+		);		
+		$this->db->where('id', $id);
+		return $this->db->update('chamados', $data);
+	}
+	
+	public function get_progress($id){
+		$query = $this->db->query("SELECT * FROM andamento WHERE id_chamado=".$id." ORDER BY criado_em DESC");
+		return $query->result_array();
+	}
+	
+	public function set_progress(){
+		
+		$now = date("Y-m-d H:i:s");		
+		$data = array(
+			'id_chamado' => $this->input->post('id_chamado'),
+			'id_tecnico' => $this->input->post('id_tecnico'),
+			'descricao' => $this->input->post('descricao'),
+			'criado_em' => $now 
+		
+		);	
+		return $this->db->insert('andamento', $data);
+	}
+	//tecnico
+	public function get_technician(){
+		
+		$user = $this->input->post('usuario');
+		$pass = $this->input->post('senha');
+		$query = $this->db->query("SELECT * FROM tecnicos WHERE user = '$user' AND password='$pass'");
+		return $query->result_array();
+		
+	}
 }
 ?>

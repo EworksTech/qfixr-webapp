@@ -137,7 +137,7 @@ class Chamados extends CI_Controller{
 			redirect('chamados','location');
 		}	 
 	}
-	
+	//todos os chamados
 	public function json(){
 		
 		$data['dbchamados'] = $this->chamados_model->get_all_calls();
@@ -176,6 +176,74 @@ class Chamados extends CI_Controller{
 		$data['dbchamado'] = $this->chamados_model->set_request_call($id);		
 		$this->load->view('chamados_atender_view',$data);
 		
+	}
+	//meus chamados
+	public function meuschamados($id=''){
+		
+		$data['dbchamados'] = $this->chamados_model->get_all_mycalls($id);
+		
+		for($i=0;$i<count($data['dbchamados']);$i++){
+			
+			$cliente = $this->clientes_model->get_client($data['dbchamados'][$i]['id_cliente']);
+			
+			$data['dbchamados'][$i]['rua'] 	  = $cliente[0]['rua'];
+			$data['dbchamados'][$i]['numero'] = $cliente[0]['numero']; 
+			$data['dbchamados'][$i]['bairro'] = $cliente[0]['bairro']; 
+			$data['dbchamados'][$i]['cidade'] = $cliente[0]['cidade']; 
+			
+		}
+		
+		$this->load->view('meuschamados_json_view',$data);
+		
+	}
+	
+	public function finalizados($id=''){
+		
+		$data['dbfinalizados'] = $this->chamados_model->get_all_myclosedcalls($id);
+		
+		for($i=0;$i<count($data['dbfinalizados']);$i++){
+			
+			$cliente = $this->clientes_model->get_client($data['dbfinalizados'][$i]['id_cliente']);
+			
+			$data['dbfinalizados'][$i]['rua'] 	  = $cliente[0]['rua'];
+			$data['dbfinalizados'][$i]['numero'] = $cliente[0]['numero']; 
+			$data['dbfinalizados'][$i]['bairro'] = $cliente[0]['bairro']; 
+			$data['dbfinalizados'][$i]['cidade'] = $cliente[0]['cidade']; 
+			
+		}
+		
+		$this->load->view('finalizados_json_view',$data);
+		
+	}
+	
+	public function checkin($id=''){
+		
+		$data['checkin']['status'] = $this->chamados_model->set_checkin($id);
+		$this->load->view('checkin_json_view',$data);
+		
+	}
+	public function checkout($id=''){
+		
+		$data['checkout']['status'] = $this->chamados_model->set_checkout($id);
+		$this->load->view('checkout_json_view',$data);
+		
+	}	
+	public function andamento($id=''){
+		
+		$data['andamento'] = $this->chamados_model->get_progress($id);
+		$this->load->view('andamento_json_view',$data);
+		
+	}
+	public function progresso(){
+		
+		$data['progresso']['status'] =  $this->chamados_model->set_progress();
+		$this->load->view('progresso_json_view',$data);
+		
+	}
+	//tecnico
+	public function login(){
+		$data['tecnico'] =  $this->chamados_model->get_technician();
+		$this->load->view('tecnico_json_view',$data);
 	}
 	
 }

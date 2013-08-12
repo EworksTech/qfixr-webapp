@@ -23,6 +23,21 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Estrutura da tabela `andamento`
+--
+
+CREATE TABLE IF NOT EXISTS `andamento` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id_chamado` int(11) NOT NULL,
+  `id_tecnico` int(11) NOT NULL,
+  `descricao` tinytext NOT NULL,
+  `criado_em` datetime NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
 -- Estrutura da tabela `chamados`
 --
 
@@ -47,10 +62,10 @@ CREATE TABLE IF NOT EXISTS `chamados` (
 --
 
 INSERT INTO `chamados` (`id`, `id_cliente`, `id_tecnico`, `id_servico`, `id_dispositivo`, `descricao`, `agendar`, `latitude`, `longitude`, `checkin_em`, `criado_em`, `finalizado_em`) VALUES
-(1, 1, 1, 1, 1, 'Computador esquenta muito e desliga sozinho, varias vezes ao dia.', NULL, NULL, NULL, NULL, '2013-08-01 19:10:42', NULL),
+(1, 1, NULL, 1, 1, 'Computador esquenta muito e desliga sozinho, varias vezes ao dia.', NULL, NULL, NULL, NULL, '2013-08-01 19:10:42', NULL),
 (3, 1, NULL, 1, 1, 'internet nao funciona ou quando funciona é muito lenta', '', NULL, NULL, NULL, '2013-07-31 18:55:08', NULL),
 (4, 5, NULL, 1, 2, 'Note book nao liga quando o dia está quente', '', NULL, NULL, NULL, '2013-07-31 20:08:53', NULL),
-(5, 6, 1, 2, 4, 'Internet nao funciona', '', NULL, NULL, NULL, '2013-08-02 00:18:56', NULL);
+(5, 6, NULL, 2, 4, 'Internet nao funciona', '', NULL, NULL, NULL, '2013-08-02 00:18:56', NULL);
 
 -- --------------------------------------------------------
 
@@ -135,14 +150,15 @@ CREATE TABLE IF NOT EXISTS `tecnicos` (
   `user` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
 
 --
 -- Extraindo dados da tabela `tecnicos`
 --
 
 INSERT INTO `tecnicos` (`id`, `nome`, `user`, `password`) VALUES
-(1, 'Cesar Mascarenhas', 'cesarmasc', '123456');
+(1, 'Cesar Mascarenhas', 'cesarmasc', '123456'),
+(2, 'Lucas Augusto', 'lucas', '123456');
 
 -- --------------------------------------------------------
 
