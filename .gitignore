@@ -1,0 +1,4 @@
+.DS_Store
+landing/clientes.txt
+landing/tecnicos.txt
+qfixr-app-admim/application/config/database.php
