@@ -2,3 +2,4 @@
 landing/clientes.txt
 landing/tecnicos.txt
 qfixr-app-admin/application/config/database.php
+cake/Config/database.php

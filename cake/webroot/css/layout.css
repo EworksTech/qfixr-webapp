@@ -1,0 +1,15 @@
+#header h1 {
+	float: left;
+}
+#header ul {
+	list-style-type: none;
+}
+#header ul li {
+	float: left;
+}
+#header ul li.last {
+	float: right;
+}
+div.tickets h1 {
+	font-weight: bold;
+}
