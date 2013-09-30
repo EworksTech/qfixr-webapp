@@ -7,6 +7,7 @@ class Ticket extends Model {
 		'Status'
 	);
   var $hasMany = array(
+    'TicketAction',
     'TicketService',
     'TicketPart'
   );

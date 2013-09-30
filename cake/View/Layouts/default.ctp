@@ -42,9 +42,11 @@
 			<h1>TECFIXER ADMIN</h1>
 			<?php if ($this->Session->check('User')): ?>
 			<ul>
-				<li><?php echo $this->Html->link('Tickets', '/tickets') ?></li>
-				<li><?php echo $this->Html->link('Reports', '/reports') ?></li>
-				<li><?php echo $this->Html->link('Users', '/users') ?></li>
+				<li><?php echo $this->Html->link('Chamados', '/tickets') ?></li>
+				<li><?php echo $this->Html->link('Clientes', '/users/index/3') ?></li>
+				<li><?php echo $this->Html->link('Técnicos', '/users/index/2') ?></li>
+				<li><?php echo $this->Html->link('Usuários', '/users/index/1') ?></li>
+				<li><?php echo $this->Html->link('Relatórios', '/reports') ?></li>
 				<li class="last"><?php echo $this->Html->link('Sair', '/users/logout') ?></li>
 			</ul>
 			<?php endif; ?>

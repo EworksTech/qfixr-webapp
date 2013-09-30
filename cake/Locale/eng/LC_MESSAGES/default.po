@@ -1,0 +1,135 @@
+msgid "Ticket"
+msgstr "Chamado"
+
+msgid "Tickets"
+msgstr "Chamados"
+
+msgid "Name"
+msgstr "Nome"
+
+msgid "Customer"
+msgstr "Cliente"
+
+msgid "Technician"
+msgstr "Técnico"
+
+msgid "Title"
+msgstr "Título"
+
+msgid "Description"
+msgstr "Descrição"
+
+msgid "Status"
+msgstr "Situação"
+
+msgid "Notes"
+msgstr "Observações"
+
+msgid "Created"
+msgstr "Criado em"
+
+msgid "Modified"
+msgstr "Modificado em"
+
+msgid "Closed"
+msgstr "Finalizado em"
+
+msgid "User"
+msgstr "Usuário"
+
+msgid "Users"
+msgstr "Usuários"
+
+msgid "Status"
+msgstr "Situação"
+
+msgid "Statuses"
+msgstr "Situações"
+
+msgid "Ticket Actions"
+msgstr "Atividades"
+
+msgid "Ticket Action"
+msgstr "Atividade"
+
+msgid "Ticket Service"
+msgstr "Serviço"
+
+msgid "Ticket Services"
+msgstr "Serviços"
+
+msgid "Ticket Part"
+msgstr "Peça"
+
+msgid "Ticket Parts"
+msgstr "Peças"
+
+msgid "Role"
+msgstr "Perfil"
+
+msgid "Roles"
+msgstr "Perfis"
+
+msgid "Type"
+msgstr "Tipo"
+
+msgid "Types"
+msgstr "Tipos"
+
+msgid "Document"
+msgstr "Documento"
+
+msgid "Password"
+msgstr "Senha"
+
+msgid "Phone Number"
+msgstr "Tel. Fixo"
+
+msgid "Mobile Number"
+msgstr "Tel. Celular"
+
+msgid "Address 1"
+msgstr "Endereço"
+
+msgid "Address 2"
+msgstr "Complemento"
+
+msgid "City"
+msgstr "Cidade"
+
+msgid "State"
+msgstr "UF"
+
+msgid "Zipcode"
+msgstr "CEP"
+
+msgid "Neighborhood"
+msgstr "Bairro"
+
+msgid "Price"
+msgstr "Preço"
+
+msgid "Related Ticket Actions"
+msgstr "Atividades Relacionadas"
+
+msgid "Related Ticket Services"
+msgstr "Serviços Relacionados"
+
+msgid "Related Ticket Parts"
+msgstr "Peças Relacionadas"
+
+msgid "Open"
+msgstr "Abertos"
+
+msgid "Pending"
+msgstr "Pendentes"
+
+msgid "Closed"
+msgstr "Finalizados"
+
+msgid "Edit %s"
+msgstr "Editar %s"
+
+msgid ""
+msgstr ""
+

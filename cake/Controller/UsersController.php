@@ -3,6 +3,10 @@
 class UsersController extends AppController {
 	var $scaffold;
 
+  public function beforeRender() {
+		$this->viewVars['scaffoldFields'] = array('id','customer_id','technician_id','title','description','status','created_at');
+  }
+
   public function login() {
     if ($this->Session->check('User')) {
       $this->redirect('users');

@@ -1,0 +1,66 @@
+msgid "Actions"
+msgstr "Ações"
+
+msgid "Page {:page} of {:pages}, showing {:current} records out of {:count} total, starting on record {:start}, ending on {:end}"
+msgstr "Exibindo registros: {:start} - {:end} | Total: {:count} | Página {:page} / {:pages}"
+
+msgid "New %s"
+msgstr "Adicionar %s"
+
+msgid "List %s"
+msgstr "Listar %s"
+
+msgid "List"
+msgstr "Listar"
+
+msgid "View"
+msgstr "Detalhes"
+
+msgid "Edit"
+msgstr "Alterar"
+
+msgid "Delete"
+msgstr "Remover"
+
+msgid "Are you sure you want to delete # %s?"
+msgstr "Tem certeza que deseja remover o registro #%s?"
+
+msgid "previous"
+msgstr "anterior"
+
+msgid "next"
+msgstr "próxima"
+
+msgid "Submit"
+msgstr "Enviar"
+
+msgid "View %s"
+msgstr "Detalhe %s"
+
+msgid "Related %s"
+msgstr "%s Relacionados"
+
+msgid "The %1$s has been %2$s"
+msgstr " %1$s foi %2$s"
+
+msgid "updated"
+msgstr "atualizado"
+
+msgid "saved"
+msgstr "inserido"
+
+msgid "Ticket Action"
+msgstr "Atividade"
+
+msgid "Please correct errors below."
+msgstr "Por favor corrija os erros abaixo."
+
+msgid "Invalid %s"
+msgstr "Registro inválido"
+
+msgid "Edit %s"
+msgstr "Editar %s"
+
+msgid ""
+msgstr ""
+
